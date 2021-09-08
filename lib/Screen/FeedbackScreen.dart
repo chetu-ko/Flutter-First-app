@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
-import 'commonComponents/customCard.dart';
+import 'package:myapp/Screen/commonComponents/customCard.dart';
 
 class FeedbackScreen extends StatefulWidget {
   @override
