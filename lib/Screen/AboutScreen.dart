@@ -33,7 +33,6 @@ class AboutScreen extends StatelessWidget {
                       Container(
                         child: Text(
                           "Education: Graduated Computer science engineer",
-                          // maxLines: 2,
                           style: TextStyle(
                             fontSize: 12,
                             color: Colors.black,

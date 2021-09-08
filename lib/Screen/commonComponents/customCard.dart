@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/task.dart';
+import 'package:myapp/widget/task.dart';
 
 class CustomCard extends StatelessWidget {
   CustomCard({this.title, this.description});
