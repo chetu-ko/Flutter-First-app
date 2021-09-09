@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:myapp/Screen/commonComponents/customCard.dart';
+import 'package:myapp/widget/drawer.dart';
 
 class FeedbackScreen extends StatefulWidget {
   @override
@@ -21,6 +22,7 @@ class _HomePageState extends State<FeedbackScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: drawer(context),
       appBar: AppBar(
         title: Text('Feedback'),
       ),
@@ -94,22 +96,23 @@ class _HomePageState extends State<FeedbackScreen> {
                   Navigator.pop(context);
                 }),
             FlatButton(
-                child: Text('Add'),
-                onPressed: () {
-                  if (name.text.isNotEmpty && message.text.isNotEmpty) {
-                    return users
-                        //.collection('tasks')
-                        .add({"title": name.text, "description": message.text})
-                        .then((result) => {
-                              Navigator.pop(context),
-                              name.clear(),
-                              message.clear(),
-                            })
-                        .catchError((err) => print(err));
-                  } else {
-                    print('please enter input');
-                  }
-                })
+              child: Text('Add'),
+              onPressed: () {
+                if (name.text.isNotEmpty && message.text.isNotEmpty) {
+                  return users
+                      //.collection('tasks')
+                      .add({"title": name.text, "description": message.text})
+                      .then((result) => {
+                            Navigator.pop(context),
+                            name.clear(),
+                            message.clear(),
+                          })
+                      .catchError((err) => print(err));
+                } else {
+                  print('please enter input');
+                }
+              },
+            )
           ],
         );
       },

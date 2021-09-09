@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/widget/drawer.dart';
 
 class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: drawer(context),
         appBar: AppBar(
           title: Text("About"),
         ),

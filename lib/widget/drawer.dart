@@ -26,6 +26,14 @@ Widget drawer(BuildContext context) {
         ),
         ListTile(
           leading: Icon(Icons.home, color: Colors.red),
+          title: Text('Home'),
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.pushNamed(context, '/first');
+          },
+        ),
+        ListTile(
+          leading: Icon(Icons.info_outline, color: Colors.red),
           title: Text('About'),
           onTap: () {
             Navigator.pop(context);

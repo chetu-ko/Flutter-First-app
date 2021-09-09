@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:myapp/utils/url_launcher.dart';
+import 'package:myapp/widget/drawer.dart';
 
 class ContactScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: drawer(context),
       appBar: AppBar(
         title: Text("Contact"),
       ),
@@ -19,7 +22,7 @@ class ContactScreen extends StatelessWidget {
                   ListTile(
                     leading: Icon(Icons.phone, size: 20, color: Colors.red),
                     title: Text(
-                      "+91 8090000000",
+                      "+91 8095211328",
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.red,
@@ -33,7 +36,7 @@ class ContactScreen extends StatelessWidget {
                       color: Colors.red,
                     ),
                     title: Text(
-                      "#00, 0 Main cross, aaa Street, bbbb city, india. 555555 ",
+                      "Karnataka, India",
                       style: TextStyle(fontSize: 20, color: Colors.red),
                     ),
                   ),
@@ -43,17 +46,32 @@ class ContactScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        FaIcon(
-                          FontAwesomeIcons.instagram,
-                          size: 20,
-                          color: Colors.red,
+                        IconButton(
+                          onPressed: () {
+                            Urllauncher()
+                                .launchInBrowser("https://github.com/chetu-ko");
+                          },
+                          icon: FaIcon(
+                            FontAwesomeIcons.github,
+                            size: 20,
+                            color: Colors.red,
+                          ),
                         ),
-                        FaIcon(FontAwesomeIcons.facebook,
-                            size: 20, color: Colors.red),
-                        FaIcon(FontAwesomeIcons.linkedin,
-                            size: 20, color: Colors.red),
-                        FaIcon(FontAwesomeIcons.twitter,
-                            size: 20, color: Colors.red),
+                        IconButton(
+                          onPressed: () {
+                            Urllauncher().makePhoneCall("8095211328");
+                          },
+                          icon: FaIcon(FontAwesomeIcons.phone,
+                              size: 20, color: Colors.red),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Urllauncher().launchInBrowser(
+                                "https://www.linkedin.com/in/chetan-koppal-627a96176/");
+                          },
+                          icon: FaIcon(FontAwesomeIcons.linkedin,
+                              size: 20, color: Colors.red),
+                        ),
                       ],
                     ),
                   ),
