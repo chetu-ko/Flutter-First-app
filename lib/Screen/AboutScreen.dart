@@ -5,13 +5,13 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: drawer(context),
-        appBar: AppBar(
-          title: Text("About"),
-        ),
-        body: Center(
-            child: Card(
-          color: Colors.lightBlue,
+      drawer: drawer(context),
+      appBar: AppBar(
+        title: Text("About"),
+      ),
+      body: Center(
+        child: Card(
+          shadowColor: Colors.pink,
           child: Container(
             alignment: Alignment.center,
             height: 300,
@@ -42,24 +42,29 @@ class AboutScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
                           height: 150,
                           alignment: Alignment.bottomCenter,
-                          child: Card(
-                            child: Text(
-                              "Here I started learning the flutter developemnt, After the complete understanding of documentation this is my first app.",
-                              // maxLines: 2,
-                              textAlign: TextAlign.justify,
-                              style:
-                                  TextStyle(fontSize: 16, color: Colors.black),
-                            ),
-                          )),
+                          child: Text(
+                            "Hi, I am flutter developer, started my flutter jounrey on feb 2021."
+                            "I am skilled in handling firebase auth, Firebase firestore, Firebase dynamic link basics "
+                            "and firebase storage. Experience of mobx and Bloc state management concepts."
+                            "I am learner, very eager to learn the flutter and work on it...",
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(fontSize: 16, color: Colors.black),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 )
               ],
             ),
           ),
-        )));
+        ),
+      ),
+    );
   }
 }

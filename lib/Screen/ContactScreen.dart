@@ -40,37 +40,70 @@ class ContactScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 20, color: Colors.red),
                     ),
                   ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Container(
                     height: 100,
                     alignment: Alignment.bottomCenter,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        IconButton(
-                          onPressed: () {
-                            Urllauncher()
-                                .launchInBrowser("https://github.com/chetu-ko");
-                          },
-                          icon: FaIcon(
-                            FontAwesomeIcons.github,
-                            size: 20,
-                            color: Colors.red,
-                          ),
+                        Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Urllauncher().launchInBrowser(
+                                    "https://github.com/chetu-ko");
+                              },
+                              icon: FaIcon(
+                                FontAwesomeIcons.github,
+                                size: 20,
+                                color: Colors.red,
+                              ),
+                            ),
+                            Text(
+                              "My Github",
+                              style: TextStyle(
+                                color: Colors.red,
+                              ),
+                            ),
+                          ],
                         ),
-                        IconButton(
-                          onPressed: () {
-                            Urllauncher().makePhoneCall("8095211328");
-                          },
-                          icon: FaIcon(FontAwesomeIcons.phone,
-                              size: 20, color: Colors.red),
+                        Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Urllauncher().makePhoneCall("8095211328");
+                              },
+                              icon: FaIcon(FontAwesomeIcons.phone,
+                                  size: 20, color: Colors.red),
+                            ),
+                            Text(
+                              "Reach Me",
+                              style: TextStyle(
+                                color: Colors.red,
+                              ),
+                            ),
+                          ],
                         ),
-                        IconButton(
-                          onPressed: () {
-                            Urllauncher().launchInBrowser(
-                                "https://www.linkedin.com/in/chetan-koppal-627a96176/");
-                          },
-                          icon: FaIcon(FontAwesomeIcons.linkedin,
-                              size: 20, color: Colors.red),
+                        Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Urllauncher().launchInBrowser(
+                                    "https://www.linkedin.com/in/chetan-koppal-627a96176/");
+                              },
+                              icon: FaIcon(FontAwesomeIcons.linkedin,
+                                  size: 20, color: Colors.red),
+                            ),
+                            Text(
+                              "Linkedin",
+                              style: TextStyle(
+                                color: Colors.red,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
