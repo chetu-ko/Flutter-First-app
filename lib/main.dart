@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:myapp/Screen/FeedAddScreen.dart';
+import 'package:myapp/Screen/splashscreen.dart';
 import 'package:myapp/bloc/feedbloc/feedbloc_bloc.dart';
 
 import 'Screen/AboutScreen.dart';
@@ -27,8 +28,9 @@ class Myapp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'World Wonders',
         theme: ThemeData(primarySwatch: Colors.red),
-        initialRoute: '/first',
+        initialRoute: '/splash',
         routes: {
+          '/splash': (context) => Splashscreen(),
           '/first': (context) => FirstScreen(),
           '/second': (context) => AboutScreen(),
           '/third': (context) => ContactScreen(),

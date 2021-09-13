@@ -18,6 +18,7 @@ class CustomCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Text("Name:  $title"),
+              // ignore: deprecated_member_use
               FlatButton(
                 child: Text("See More"),
                 onPressed: () {

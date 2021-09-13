@@ -71,7 +71,6 @@ class _HomePageState extends State<FeedbackScreen> {
           contentPadding: const EdgeInsets.all(16.0),
           content: Column(
             children: <Widget>[
-              Text("Please fill all fields to create a new task"),
               Expanded(
                 child: TextField(
                   autofocus: true,
@@ -88,6 +87,7 @@ class _HomePageState extends State<FeedbackScreen> {
             ],
           ),
           actions: <Widget>[
+            // ignore: deprecated_member_use
             FlatButton(
                 child: Text('Cancel'),
                 onPressed: () {
@@ -95,6 +95,7 @@ class _HomePageState extends State<FeedbackScreen> {
                   message.clear();
                   Navigator.pop(context);
                 }),
+            // ignore: deprecated_member_use
             FlatButton(
               child: Text('Add'),
               onPressed: () {
@@ -107,6 +108,7 @@ class _HomePageState extends State<FeedbackScreen> {
                             name.clear(),
                             message.clear(),
                           })
+                      // ignore: return_of_invalid_type_from_catch_error
                       .catchError((err) => print(err));
                 } else {
                   print('please enter input');

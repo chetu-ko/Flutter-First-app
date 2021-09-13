@@ -15,101 +15,103 @@ class ContactScreen extends StatelessWidget {
         child: Card(
           shadowColor: Colors.pink,
           child: Container(
-              height: 300,
-              width: 300,
-              child: ListView(
-                children: <Widget>[
-                  ListTile(
-                    leading: Icon(Icons.phone, size: 20, color: Colors.red),
-                    title: Text(
-                      "+91 8095211328",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.red,
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.location_city,
-                      size: 20,
+            height: 300,
+            width: 300,
+            child: ListView(
+              children: <Widget>[
+                ListTile(
+                  leading: Icon(Icons.phone, size: 20, color: Colors.red),
+                  title: Text(
+                    "+91 8095211328",
+                    style: TextStyle(
+                      fontSize: 20,
                       color: Colors.red,
                     ),
-                    title: Text(
-                      "Karnataka, India",
-                      style: TextStyle(fontSize: 20, color: Colors.red),
-                    ),
                   ),
-                  SizedBox(
-                    height: 30,
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.location_city,
+                    size: 20,
+                    color: Colors.red,
                   ),
-                  Container(
-                    height: 100,
-                    alignment: Alignment.bottomCenter,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Column(
-                          children: [
-                            IconButton(
-                              onPressed: () {
-                                Urllauncher().launchInBrowser(
-                                    "https://github.com/chetu-ko");
-                              },
-                              icon: FaIcon(
-                                FontAwesomeIcons.github,
-                                size: 20,
-                                color: Colors.red,
-                              ),
-                            ),
-                            Text(
-                              "My Github",
-                              style: TextStyle(
-                                color: Colors.red,
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            IconButton(
-                              onPressed: () {
-                                Urllauncher().makePhoneCall("8095211328");
-                              },
-                              icon: FaIcon(FontAwesomeIcons.phone,
-                                  size: 20, color: Colors.red),
-                            ),
-                            Text(
-                              "Reach Me",
-                              style: TextStyle(
-                                color: Colors.red,
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            IconButton(
-                              onPressed: () {
-                                Urllauncher().launchInBrowser(
-                                    "https://www.linkedin.com/in/chetan-koppal-627a96176/");
-                              },
-                              icon: FaIcon(FontAwesomeIcons.linkedin,
-                                  size: 20, color: Colors.red),
-                            ),
-                            Text(
-                              "Linkedin",
-                              style: TextStyle(
-                                color: Colors.red,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                  title: Text(
+                    "Karnataka, India",
+                    style: TextStyle(fontSize: 20, color: Colors.red),
                   ),
-                ],
-              )),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  height: 100,
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Column(
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              Urllauncher().launchInBrowser(
+                                  "https://github.com/chetu-ko");
+                            },
+                            icon: FaIcon(
+                              FontAwesomeIcons.github,
+                              size: 20,
+                              color: Colors.red,
+                            ),
+                          ),
+                          Text(
+                            "My Github",
+                            style: TextStyle(
+                              color: Colors.red,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              var _phone = 8095211328;
+                              Urllauncher().makePhoneCall("'tel:$_phone'");
+                            },
+                            icon: FaIcon(FontAwesomeIcons.phone,
+                                size: 20, color: Colors.red),
+                          ),
+                          Text(
+                            "Reach Me",
+                            style: TextStyle(
+                              color: Colors.red,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              Urllauncher().launchInBrowser(
+                                  "https://www.linkedin.com/in/chetan-koppal-627a96176/");
+                            },
+                            icon: FaIcon(FontAwesomeIcons.linkedin,
+                                size: 20, color: Colors.red),
+                          ),
+                          Text(
+                            "Linkedin",
+                            style: TextStyle(
+                              color: Colors.red,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

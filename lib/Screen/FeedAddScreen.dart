@@ -177,6 +177,7 @@ class _FeedPostViewState extends State<FeedPostView> {
 
   Future<PickedFile> setImage() async {
     final PickedFile file =
+        // ignore: deprecated_member_use
         await ImagePicker().getImage(source: ImageSource.gallery);
     return file;
   }

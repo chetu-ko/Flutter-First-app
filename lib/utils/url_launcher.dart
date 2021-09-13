@@ -16,7 +16,7 @@ class Urllauncher {
 
   Future<void> makePhoneCall(String url) async {
     if (await canLaunch(url)) {
-      await launch(url);
+      await launch(url, forceSafariVC: false, forceWebView: false);
     } else {
       throw 'Could not launch $url';
     }
